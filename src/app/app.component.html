@@ -1,1 +1,15 @@
-<h1>Hola mundo</h1>
+<ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" routerLink="clientes/list" routerLinkActive = "active">Clientes</a>
+    </li>
+  </ul>
+    <div class="container-fliud">
+      <div class="border m-5 row">
+        <div class="col">
+          <router-outlet></router-outlet>
+        </div>
+        <div class="col">
+              <router-outlet name="detail"></router-outlet>
+          </div>
+      </div>
+    </div>

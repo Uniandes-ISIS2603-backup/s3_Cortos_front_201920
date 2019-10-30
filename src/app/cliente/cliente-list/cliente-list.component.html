@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="col">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Nombre Cliente</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let cliente of clientes">
+          <td style ="cursor: pointer;">
+            <a class="figure-caption" [routerLink]="['/clientes', { outlets: { 'detail': [cliente.id] } }]">{{cliente.nombre}}</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
