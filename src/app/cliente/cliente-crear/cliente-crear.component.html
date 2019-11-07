@@ -1,0 +1,43 @@
+<form [formGroup]="clientForm" (ngSubmit)="createClient(clientForm.value)">
+
+  <div class="form-group mx-sm-3 mb-2">
+   <label for="nombre">
+     Nombre
+   </label>
+   <input novalidate
+     id="nombre"
+     class="form-control"
+     formControlName="nombre"
+     placeholder="Tu nombre completo">
+  </div>
+
+  <div class="alert alert-danger alert-dismissible fade show"
+       *ngIf="clientForm.get('nombre').hasError('required') && 
+     clientForm.get('nombre').touched">
+     Nombre requerido
+ </div>
+
+  <div class="form-group  mx-sm-3 mb-2">
+   <label for="correo">
+     Correo
+   </label>
+  <input id="correo" type="text"
+    class="form-control"
+    formControlName="correo"
+    placeholder="Tu correo">
+ </div>
+
+ <div class="form-group  mx-sm-3 mb-2">
+  <label for="contrasenia">
+    Contrasenia
+  </label>
+ <input id="contrasenia" type="text"
+   class="form-control"
+   formControlName="contrasenia"
+   placeholder="Tu contrasenia">
+</div>
+
+ <button class="button mx-sm-3 mb-2" type="submit"   
+         >Crear</button>
+
+</form>

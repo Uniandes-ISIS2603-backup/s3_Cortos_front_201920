@@ -7,6 +7,7 @@ import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
 import{ClienteDetailComponent} from '../cliente/cliente-detail/cliente-detail.component';
 import{ClienteListComponent} from '../cliente/cliente-list/cliente-list.component';
+import {ClienteCrearComponent} from '../cliente/cliente-crear/cliente-crear.component';
 
 const routes: Routes = [
 
@@ -50,6 +51,10 @@ const routes: Routes = [
           component: ClienteDetailComponent,
           outlet: 'detail'
         }]
+      },
+      {
+        path: 'create',
+        component: ClienteCrearComponent
       }
 ];
 

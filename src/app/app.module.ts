@@ -10,11 +10,12 @@ import {HttpErrorInterceptor} from './interceptors/httperrorinterceptor.service'
 import {NgxPermissionsModule} from 'ngx-permissions';
 import { ModalDialogModule } from 'ngx-modal-dialog';
 
+
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 import { ClienteModule } from './cliente/cliente.module';
-
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 
 
@@ -22,7 +23,7 @@ import { ClienteModule } from './cliente/cliente.module';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent, TopBarComponent
     ],
     imports: [
         BrowserModule,
