@@ -16,6 +16,7 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 import { ClienteModule } from './cliente/cliente.module';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -23,7 +24,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 
 @NgModule({
     declarations: [
-        AppComponent, TopBarComponent
+        AppComponent, TopBarComponent, HomeComponent
     ],
     imports: [
         BrowserModule,

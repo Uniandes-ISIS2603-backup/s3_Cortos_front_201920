@@ -1,13 +1,31 @@
-<div class="container-fluid p-3 row">
-	<div class="col-5"> <a [routerLink]="['/clientes/list']">
-			<h1>Clientes</h1>
-		</a>
+
+<nav class="navbar" id="navBar">
+  <div>
+      <a class="navbar-brand" href="home">
+          <img src="../../assets/WIKIO.png" width="80" height="40" class="d-inline-block align-top" alt="">
+        </a>
   </div>
-  <div class="col-5"> <a [routerLink]="['/clientes/list']">
-    <h1>Cinestas</h1>
-  </a>
-</div>
-	<div class="col">
-		<a [routerLink]="['/create']" class="button fancy-button">Sign up</a>
-	</div>
-</div>
+  <div class="col-2">
+      <a [routerLink]="['/create']" class="button fancy-button">Sign up</a>
+    </div>
+
+    <div class="container-fluid row">
+      <div class="row col-12" id="buttons">
+          <div class="col-2"> 
+            <a [routerLink]="['/clientes/list']">
+              <h4>Clientes</h4>
+            </a>
+          </div>
+          <div class="col-2"> 
+            <a [routerLink]="['/clientes/list']">
+              <h4>Cineastas</h4>
+            </a>
+          </div>
+          <div class="col-2"> 
+              <a [routerLink]="['/clientes/list']">
+                <h4>Cortos</h4>
+              </a>
+            </div>
+      </div>      
+    </div>
+  </nav>
