@@ -11,7 +11,11 @@ import { ClienteCrearComponent } from '../cliente/cliente-crear/cliente-crear.co
 import { CineastaDetailComponent } from '../cineasta/cineasta-detail/cineasta-detail.component';
 import { CineastaListComponent } from '../cineasta/cineasta-list/cineasta-list.component';
 import { CineastaCrearComponent } from '../cineasta/cineasta-crear/cineasta-crear.component';
+import {ComentarioListComponent} from '../comentario/comentario-list/comentario-list.component';
+import {ComentarioDetailComponent} from '../comentario/comentario-detail/comentario-detail.component';
+import {ComentarioCreateComponent} from '../comentario/comentario-create/comentario-create.component';
 import { HomeComponent } from '../home/home.component';
+import {ComentarioModule} from '../comentario/comentario.module'
 
 const routes: Routes = [
 
@@ -71,6 +75,22 @@ const routes: Routes = [
             component: ClienteDetailComponent,
             outlet: 'detail'
         }]
+    },
+    {
+        path: 'comentarios',
+        children: [{
+            path: 'list',
+            component: ComentarioListComponent
+        },
+        {
+            path: ':id',
+            component: ComentarioDetailComponent,
+            outlet: 'detail'
+        }]
+    },
+    {
+        path: 'comentariosCrear',
+        component: ComentarioCreateComponent
     },
     {
         path: 'create',

@@ -1,0 +1,21 @@
+<div class="container-fluid">
+	<div class="col-md-2">
+		<table class="table table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th>Comentario</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+				<tr *ngFor="let e of comentarios">
+					<td style="cursor:pointer;">
+						<a class="figure-caption" [routerLink]="['/comentarios', { outlets: { 'detail': [comentario.id] } }]">{{comentario.id}}</a>
+
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

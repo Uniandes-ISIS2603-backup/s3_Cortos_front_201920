@@ -17,6 +17,7 @@ import {AuthModule} from './auth/auth.module';
 import { ClienteModule } from './cliente/cliente.module';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { HomeComponent } from './home/home.component';
+import {ComentarioModule} from './comentario/comentario.module';
 
 
 
@@ -42,7 +43,7 @@ import { HomeComponent } from './home/home.component';
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
         NgbModule,
-        ClienteModule
+        ClienteModule,ComentarioModule
     ],
     bootstrap: [AppComponent],
     providers: [
