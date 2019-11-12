@@ -7,6 +7,11 @@ import { catchError, map, tap } from "rxjs/operators";
 
 const API_URL = "http://localhost:8080/s3_cortos-api/api/comentarios";
 const comentarios ='comentarios.json' ;
+const myObserver = {
+  next: x => console.log('Observer got a next value: ' + x),
+  error: err => console.error('Observer got an error: ' + err),
+  complete: () => console.log('Observer got a complete notification'),
+};
 @Injectable()
 export class ComentarioService {
 
@@ -18,6 +23,7 @@ private comentariosUrl = "http://localhost:8080/s3_cortos-api/api/comentarios";
 
   constructor(private http:HttpClient) {}
 
+ 
 
     getComentarios() : Observable<Comentario[]> {
         return this.http.get<Comentario[]>(API_URL);

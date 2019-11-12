@@ -15,16 +15,15 @@ export class ComentarioListComponent implements OnInit{
   constructor(private comentarioService:ComentarioService) { }
     comentarios:Comentario[]=new Array();
 
-    
   getComentarios():void{
-    this.comentarioService.getComentarios().subscribe(comentarios=>this.comentarios=comentarios);
+    this.comentarioService.getComentarios().subscribe(comment=>this.comentarios=comment);
   }
   comentario_id:number;
   selectedComentario:ComentarioDetail;
 
   onSelected(comentario_id:number):void{
     this.comentario_id=comentario_id;
-    this.selectedComentario=new ComentarioDetail();
+    this.selectedComentario=new ComentarioDetail(0,'sasd',null);
     this.comentarioService.getComentarioDetail(comentario_id).subscribe(o => this.selectedComentario =o);
   }
   ngOnInit() {

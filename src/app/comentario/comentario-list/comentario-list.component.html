@@ -9,9 +9,9 @@
 			<tbody>
 				<tr>
 					<td></td>
-				<tr *ngFor="let e of comentarios">
+				<tr *ngFor="let e of comentarios | async">
 					<td style="cursor:pointer;">
-						<a class="figure-caption" [routerLink]="['/comentarios', { outlets: { 'detail': [comentario.id] } }]">{{comentario.id}}</a>
+						<a class="figure-caption" [routerLink]="['/comentarios', { outlets: { 'detail': [comentario.id] } }]">{{comentario?.id}}</a>
 
 					</td>
 				</tr>
