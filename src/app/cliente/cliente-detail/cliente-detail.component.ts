@@ -29,7 +29,7 @@ export class ClienteDetailComponent implements OnInit {
   {
     this.cliente_id = parseInt(params['id']);
     console.log("en detail" + this.cliente_id);
-    this.clienteDetail = new ClienteDetail(0,"h");
+    this.clienteDetail = new ClienteDetail(0,"");
     this.getClienteDetail();
   }
 
