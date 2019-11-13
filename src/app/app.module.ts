@@ -18,7 +18,7 @@ import { ClienteModule } from './cliente/cliente.module';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { HomeComponent } from './home/home.component';
 import {ComentarioModule} from './comentario/comentario.module';
-
+import { CineastaModule } from './cineasta/cineasta.module';
 
 
 
@@ -43,7 +43,8 @@ import {ComentarioModule} from './comentario/comentario.module';
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
         NgbModule,
-        ClienteModule,ComentarioModule
+        ClienteModule,ComentarioModule,
+        CineastaModule
     ],
     bootstrap: [AppComponent],
     providers: [

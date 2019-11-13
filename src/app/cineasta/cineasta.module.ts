@@ -19,4 +19,4 @@ import { CineastaCrearComponent } from './cineasta-crear/cineasta-crear.componen
 
   providers: [CineastaService]
 })
-export class ClienteModule { }
+export class CineastaModule { }

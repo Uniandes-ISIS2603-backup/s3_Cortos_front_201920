@@ -68,11 +68,11 @@ const routes: Routes = [
         path: 'cineastas',
         children: [{
             path: 'list',
-            component: ClienteListComponent
+            component: CineastaListComponent
         },
         {
             path: ':id',
-            component: ClienteDetailComponent,
+            component: CineastaDetailComponent,
             outlet: 'detail'
         }]
     },

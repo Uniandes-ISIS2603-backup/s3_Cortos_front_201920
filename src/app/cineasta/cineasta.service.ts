@@ -7,7 +7,7 @@ import { CineastaDetail } from './cineasta-detail';
 import { environment } from '../../environments/environment';
 
 const API_URL = environment.apiURL;
-const cineastas = '/cineastas';
+const cineastas = '/cineasta';
 
 
 /**

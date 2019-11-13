@@ -5,9 +5,9 @@ import { CineastaService } from '../cineasta.service';
 import { Cineasta } from '../cineasta';
 
 @Component({
-    selector: 'app-cineasta-create',
-    templateUrl: './cineasta-create.component.html',
-    styleUrls: ['./cineasta-create.component.css'],
+    selector: 'app-cineasta-crear',
+    templateUrl: './cineasta-crear.component.html',
+    styleUrls: ['./cineasta-crear.component.css'],
     providers: [DatePipe]
 })
 export class CineastaCrearComponent implements OnInit {
