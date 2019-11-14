@@ -56,8 +56,7 @@ const routes: Routes = [
         },
         {
             path: ':id',
-            component: ClienteDetailComponent,
-            outlet: 'detail'
+            component: ClienteDetailComponent
         }]
     },
     {

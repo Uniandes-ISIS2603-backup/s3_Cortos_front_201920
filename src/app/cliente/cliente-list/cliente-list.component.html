@@ -10,10 +10,11 @@
         <tr *ngFor = "let cliente of clientes ">
             <td style ="cursor: pointer;">
                 <img src="https://www.sbp-creative.com/wp-content/uploads/2017/01/profile-placeholder.png" width="30" height="30" id="list-placeholder">
-              <a class="figure-caption" [routerLink]="['/clientes', { outlets: { 'detail': [cliente.id] } }]">{{cliente.nombre}}</a>
+              <a class="figure-caption" routerLink="/clientes/{{cliente.id}}">{{cliente.nombre}}</a>
             </td>
           </tr>
       </tbody>
     </table>
   </div>
 </div>
+
