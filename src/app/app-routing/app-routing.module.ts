@@ -15,7 +15,10 @@ import {ComentarioListComponent} from '../comentario/comentario-list/comentario-
 import {ComentarioDetailComponent} from '../comentario/comentario-detail/comentario-detail.component';
 import {ComentarioCreateComponent} from '../comentario/comentario-create/comentario-create.component';
 import { HomeComponent } from '../home/home.component';
-import {ComentarioModule} from '../comentario/comentario.module'
+import { CortoListComponent } from '../corto/corto-list/corto-list.component';
+import { CortoDetailComponent } from '../corto/corto-detail/corto-detail.component';
+import { CortoCreateComponent } from '../corto/corto-create/corto-create.component';
+
 
 const routes: Routes = [
 
@@ -94,7 +97,14 @@ const routes: Routes = [
     {
         path: 'create',
         component: ClienteCrearComponent
-    }
+    },
+    {path : 'cortos',
+    children :[{path : 'list',
+    component : CortoListComponent},
+    {path :':id',
+    component : CortoDetailComponent},
+    ]},
+    {path:'createCorto', component : CortoCreateComponent}
 ];
 
 @NgModule({

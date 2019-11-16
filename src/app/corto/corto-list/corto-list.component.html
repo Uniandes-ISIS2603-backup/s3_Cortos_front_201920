@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="col">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Nombre del Corto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let corto of cortos ">
+            <td style ="cursor: pointer;">
+                <img src="https://www.sbp-creative.com/wp-content/uploads/2017/01/profile-placeholder.png" width="30" height="30" id="list-placeholder">
+              <a class="figure-caption" routerLink="/cortos/{{corto.id}}">{{corto.nombre}}</a>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  <button type ="button" class="btn btn-success" routerLink="/cortos/create">crear</button>
+</div>
+

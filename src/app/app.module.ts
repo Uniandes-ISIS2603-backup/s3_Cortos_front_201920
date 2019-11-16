@@ -19,7 +19,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { HomeComponent } from './home/home.component';
 import {ComentarioModule} from './comentario/comentario.module';
 import { CineastaModule } from './cineasta/cineasta.module';
-
+import { CortoModule } from './corto/corto.module';
 
 
 
@@ -44,7 +44,7 @@ import { CineastaModule } from './cineasta/cineasta.module';
         NgxPermissionsModule.forRoot(),
         NgbModule,
         ClienteModule,ComentarioModule,
-        CineastaModule
+        CineastaModule, CortoModule
     ],
     bootstrap: [AppComponent],
     providers: [
