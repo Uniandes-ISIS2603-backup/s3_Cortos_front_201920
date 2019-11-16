@@ -20,7 +20,7 @@ export class CortoDetailComponent implements OnInit, OnDestroy {
   {
     this.corto_id = parseInt(params['id']);
     
-    this.corto = new CortoDetail(0,"hola","asd");
+    this.corto = new CortoDetail(0,"hola","asd",0);
     this.getCortoDetail();
   }
   getCortoDetail():void{
