@@ -22,6 +22,10 @@ export class ClienteService {
     return this.http.get<Cliente[]>(API_URL);
   }
 
+  getClientesNombreLike(searc: String): Observable<Cliente[]>{
+    return this.http.get<Cliente[]>(API_URL + "/search-"+ searc);
+  }
+
   getClientesDetail(clienteId): Observable<ClienteDetail>{
     return this.http.get<ClienteDetail>(API_URL + "/" + clienteId);
   }
