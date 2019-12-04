@@ -20,6 +20,7 @@ import { CortoDetailComponent } from '../corto/corto-detail/corto-detail.compone
 import { CortoCreateComponent } from '../corto/corto-create/corto-create.component';
 import { SearchComponent } from '../search/search.component';
 import { SearchAllComponent } from '../search-all/search-all.component';
+import {LoginComponent} from '../login/login.component';
 
 const routes: Routes = [
 
@@ -105,6 +106,10 @@ const routes: Routes = [
     {
         path: 'create',
         component: ClienteCrearComponent
+    },
+    {
+        path: 'login',
+        component: LoginComponent
     },
     {path : 'cortos',
     children :[{path : 'list',

@@ -35,7 +35,6 @@ export class SearchComponent implements OnInit {
   createSearch(formData: any) {
     // Process checkout data here
     let newClients: Cliente[] = [];
-    let i = 0;
     let nameU = this.searchForm.get('nombreUsuario').value;
     console.log("buscando " + this.clientes);
     console.log("buscando " + this.searchForm.get('nombreUsuario').value);

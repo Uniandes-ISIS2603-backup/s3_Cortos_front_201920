@@ -36,4 +36,21 @@ h1, h2 {
   .insta .insta-picture-data span {
     padding: 10px;
   }
+
+  .button {
+    border: none;
+    color: white;
+    padding: 5px 16 px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .button-red
+  {
+    background-color: #f44336;
+  }
   
