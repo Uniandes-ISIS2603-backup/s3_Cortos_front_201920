@@ -20,12 +20,17 @@ import { HomeComponent } from './home/home.component';
 import {ComentarioModule} from './comentario/comentario.module';
 import { CineastaModule } from './cineasta/cineasta.module';
 import { CortoModule } from './corto/corto.module';
-
+import { SearchComponent } from './search/search.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { SearchAllComponent } from './search-all/search-all.component';
+import { LoginComponent } from './login/login.component';
+import { AuthConfirmComponent } from './auth-confirm/auth-confirm.component';
+import { ShowRandomUserComponent } from './show-random-user/show-random-user.component';
 
 
 @NgModule({
     declarations: [
-        AppComponent, TopBarComponent, HomeComponent
+        AppComponent, TopBarComponent, HomeComponent, SearchComponent, SearchAllComponent, LoginComponent, AuthConfirmComponent, ShowRandomUserComponent
     ],
     imports: [
         BrowserModule,
@@ -35,6 +40,7 @@ import { CortoModule } from './corto/corto.module';
         ModalDialogModule.forRoot(),
         AuthModule,
         FormsModule,
+        ReactiveFormsModule,
         ToastrModule.forRoot({
             timeOut: 10000,
             positionClass: 'toast-bottom-right',

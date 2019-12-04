@@ -1,6 +1,26 @@
-<div class="col-md-12">
-  <div class="container-fluid">
-    <p class="h3 p-3">Cliente: {{clienteDetail.nombre}}</p>
-    <p class="h3 p-3">Correo: {{clienteDetail.correo}}</p>
+<div class="card">
+  <div class="col-md-12">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-3">
+              <img src="../../../assets/profile-placeholder.png">
+            </div>
+            <div class="col-md-7" id="info">
+                <p class="h3 p-3">Nombre:</p>
+                <p class="h2 p-2"> {{clienteDetail.nombre}} </p>
+                <p class="h3 p-3">Correo</p>
+                <p class="h2 p-2"> {{clienteDetail.correo}} </p>
+            </div>
+            <div class="col-md-2">   
+              <div class="row">
+                  <button class="button">Facturas</button>
+              </div>
+              <div class="row">
+                  <button class="button">Formas de Pago</button>
+              </div>
+            </div>
+      </div>
+
+    </div>
   </div>
 </div>

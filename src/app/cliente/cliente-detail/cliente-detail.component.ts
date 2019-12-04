@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 import {Cliente} from '../cliente';
 import {ClienteService} from '../cliente.service';
@@ -12,7 +13,9 @@ import {ClienteDetail} from '../cliente-detail';
 })
 export class ClienteDetailComponent implements OnInit {
 
-  constructor(private clienteService: ClienteService, private route: ActivatedRoute) { }
+  constructor(private clienteService: ClienteService, private route: ActivatedRoute) {
+    
+   }
 
   clienteDetail: ClienteDetail;
 
@@ -24,6 +27,7 @@ export class ClienteDetailComponent implements OnInit {
     this.clienteService.getClientesDetail(this.cliente_id)
     .subscribe(clienteDetail => this.clienteDetail = clienteDetail);
   }
+
 
   onLoad(params)
   {

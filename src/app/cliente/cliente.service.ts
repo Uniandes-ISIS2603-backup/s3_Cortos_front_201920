@@ -22,6 +22,19 @@ export class ClienteService {
     return this.http.get<Cliente[]>(API_URL);
   }
 
+  getClienteRandom(): Observable<Cliente>{
+    return this.http.get<Cliente>(API_URL + "/random");
+  }
+
+  getClientesNombreLike(searc: String): Observable<Cliente[]>{
+    return this.http.get<Cliente[]>(API_URL + "/search-"+ searc);
+  }
+
+  getClientesNombre(searc): Observable<Cliente>{
+    console.warn("Url", API_URL + "/" + searc);
+    return this.http.get<Cliente>(API_URL + "/" + searc);
+  }
+
   getClientesDetail(clienteId): Observable<ClienteDetail>{
     return this.http.get<ClienteDetail>(API_URL + "/" + clienteId);
   }
