@@ -18,4 +18,7 @@ export class CortoService {
   createCorto(corto: Corto): Observable<Corto>{
     return this.http.post<Corto>(this.cortosUrl, corto);
   } 
+  getCortosNombreLike(searc: String): Observable<Corto[]>{
+    return this.http.get<Corto[]>(API_URL + "/search-"+ searc);
+  }
 }

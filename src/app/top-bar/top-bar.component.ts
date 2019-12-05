@@ -23,7 +23,7 @@ export class TopBarComponent implements OnInit {
    {
     console.warn("el cliente esta siendo buscado", name);
    }
-
+   
   ngOnInit() {
   }
 

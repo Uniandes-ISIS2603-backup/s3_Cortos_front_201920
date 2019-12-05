@@ -8,20 +8,14 @@
              <tbody>
                <tr>
                  <td>
-                   Artista
+                   Cineasta
                    <input type="text" class="form-control" id="nombreArtista" placeholder="Filtrar por Artista" formControlName="nombreArtista">
                  </td>
                </tr>
                <tr>
                  <td>
-                   Usuario
+                   Corto
                    <input type="text" class="form-control" id="nombreUsuario" placeholder="Filtrar por Usuario" formControlName="nombreUsuario" >
-                 </td>
-               </tr>
-               <tr>
-                 <td>
-                   Vinilo
-                   <input type="text" class="form-control" id="nombreVinilo" placeholder="Filtrar por Vinilo" formControlName="nombreVinilo">
                  </td>
                </tr>
                <tr>
@@ -53,6 +47,13 @@
                      </section>
                    </td>
                   </div>
+                  <div *ngFor = "let corto of cotos">
+                    <td style ="cursor: pointer;">
+                      <section class="insta-picture-container"><img class="insta-picture" src="https://www.sbp-creative.com/wp-content/uploads/2017/01/profile-placeholder.png"/>
+                      <section class="insta-picture-data"><span routerLink="/clientes/{{corto.id}}">{{corto.nombre}} </span></section>
+                      </section>
+                    </td>
+                   </div>
                 </section>
               </section>         
         </div>
