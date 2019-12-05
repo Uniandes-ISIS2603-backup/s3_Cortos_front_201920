@@ -67,12 +67,12 @@ export class CineastaCrearComponent implements OnInit {
     cancelCreation(): void {
         this.cancel.emit();
     }
-
+    Cineastasss: Cineasta[];
     /**
     * This function will initialize the component
     */
     ngOnInit() {
-        this.cineasta = new Cineasta();
+        this.cineastaService.getCineastas().subscribe(cineastas =>{this.Cineastasss=cineastas});
     }
 
 }
