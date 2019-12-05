@@ -1,0 +1,6 @@
+<div *ngIf="client.nombre != null; else elseBlock">
+    <h2>Bienvenido</h2>
+    <p>{{client.nombre}}</p>
+</div>
+<ng-template #elseBlock>
+</ng-template>

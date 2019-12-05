@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <h2 class="card-tittle"> Filtros </h2>
+           <form style="margin:10px;" [formGroup]="searchForm" (ngSubmit)="createSearch(searchForm.value)">
+           <table class="table">
+             <tbody>
+               <tr>
+                 <td>
+                   Artista
+                   <input type="text" class="form-control" id="nombreArtista" placeholder="Filtrar por Artista" formControlName="nombreArtista">
+                 </td>
+               </tr>
+               <tr>
+                 <td>
+                   Usuario
+                   <input type="text" class="form-control" id="nombreUsuario" placeholder="Filtrar por Usuario" formControlName="nombreUsuario" >
+                 </td>
+               </tr>
+               <tr>
+                 <td>
+                   Vinilo
+                   <input type="text" class="form-control" id="nombreVinilo" placeholder="Filtrar por Vinilo" formControlName="nombreVinilo">
+                 </td>
+               </tr>
+               <tr>
+                 <td>
+                   Tema
+                   <input type="text" class="form-control" id="nombreTema" placeholder="Filtrar por Tema" formControlName="nombreTema">
+                 </td>
+               </tr>
+               <tr>
+                 <td>
+                   <button type="button" id="button-filterByName" class="btn btn-success" type="submit">Aplicar</button>
+                 </td>
+               </tr>
+             </tbody>
+           </table>
+           </form>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="card">
+          <h2 class="card-tittle"> Resultados de la Busqueda </h2>
+           <section class="insta">
+             <section class="insta-gallery">
+                 <div *ngFor = "let cliente of clientes">
+                   <td style ="cursor: pointer;">
+                     <section class="insta-picture-container"><img class="insta-picture" src="https://www.sbp-creative.com/wp-content/uploads/2017/01/profile-placeholder.png"/>
+                     <section class="insta-picture-data"><span routerLink="/clientes/{{cliente.id}}">{{cliente.nombre}} </span></section>
+                     </section>
+                   </td>
+                  </div>
+                </section>
+              </section>         
+        </div>
+      </div>
+    </div>
+  </div>

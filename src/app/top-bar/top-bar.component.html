@@ -10,12 +10,12 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            <img src="../../assets/busquede.png" width="25" height="25" class="d-inline-block align-center" alt="">
-          </button>
-          <button class="btn btn-outline-success" type="button" [routerLink]="['/create']">Login</button>
+        <form class="form-inline my-2 my-lg-0" [formGroup]="buscarForm" (ngSubmit)="buscarClient(buscarForm.value)">
+          <input class="form-control mr-sm-2" id="buscar" type="search" placeholder="Search" aria-label="Search" formControlName="buscar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="/search/{{buscarForm.get('buscar').value}}">
+              <img src="../../assets/busquede.png" width="25" height="25" class="d-inline-block align-center" alt="">
+            </button>
+          <button class="btn btn-outline-success" type="button" [routerLink]="['/login']">Login</button>
           <button class="btn btn-outline-success" type="button" [routerLink]="['/create']">Crea tu cuenta</button>
           <button class="btn btn-outline-success" type="button" [routerLink]="['/createCorto']">Crea tu corto</button>
         </form>
