@@ -1,14 +1,12 @@
 <form [formGroup]="comentarioForm" (ngSubmit)="createComentario(comentarioForm.value)">
-
+	<div class="row">
+		<p> </p>
+	</div>
 	<div class="form-group mx-sm-3 mb-2">
 		<label for="id">
-      Identificador
-    </label>
-		<input novalidate
-    id="id" type="number"
-    class="form-control"
-      formControlName="id"
-      placeholder="200">
+			Identificador
+		</label>
+		<input novalidate id="id" type="number" class="form-control" formControlName="id" placeholder="200">
 
 		<div class="alert alert-danger alert-dismissible fade show"
 			*ngIf="comentarioForm.get('id').hasError('required') && comentarioForm.get('id').touched">
@@ -18,26 +16,21 @@
 
 	<div class="form-group  mx-sm-3 mb-2">
 		<label for="comentario">
-      Comentario
-    </label>
-		<input id="comentario" type="text"
-     class="form-control"
-     formControlName="comentario"
-     placeholder="Tarantined by Quentin Directino ">
+			Comentario
+		</label>
+		<input id="comentario" type="text" class="form-control" formControlName="comentario"
+			placeholder="Tarantined by Quentin Directino ">
 
 		<div class="alert alert-danger alert-dismissible fade show"
 			*ngIf="comentarioForm.get('comentario').hasError('required') && comentarioForm.get('comentario').touched">
 			Se necesita comentario
 		</div>
 	</div>
-  	<div class="form-group  mx-sm-3 mb-2">
+	<div class="form-group  mx-sm-3 mb-2">
 		<label for="fecha">
-      Fecha
-    </label>
-		<input id="fecha" type="date"
-     class="form-control"
-     formControlName="fecha"
-     placeholder="">
+			Fecha
+		</label>
+		<input id="fecha" type="date" class="form-control" formControlName="fecha" placeholder="">
 
 		<div class="alert alert-danger alert-dismissible fade show"
 			*ngIf="comentarioForm.get('comentario').hasError('required') && comentarioForm.get('comentario').touched">

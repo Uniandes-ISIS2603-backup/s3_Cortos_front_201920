@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row">
+        <p> </p>
+    </div>
+    <div class="col">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre Cineasta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cineasta of cineastas">
+                    <td style="cursor: pointer;">
+                        <a routerLink="/cineastas/{{cineasta.id}}">{{cineasta.nombre}}</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

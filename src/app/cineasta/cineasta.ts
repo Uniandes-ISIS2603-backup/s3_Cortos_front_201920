@@ -45,4 +45,9 @@ export class Cineasta { //AUN NO SE HA TENIDO EN CUENTA EL TIPO DE CINEASTA (PRE
      */
     genero: boolean;
 
+    constructor(id: number, nombre:string)
+    {
+      this.id = id;
+      this.nombre = nombre;
+    }
 }
