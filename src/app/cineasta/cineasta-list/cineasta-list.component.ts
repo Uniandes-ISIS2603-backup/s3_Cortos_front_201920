@@ -62,7 +62,7 @@ export class CineastaListComponent implements OnInit {
         this.showEdit = false;
         this.showView = true;
         this.cineasta_id = cineasta_id;
-        this.selectedCineasta = new CineastaDetail();
+        
         this.getCineastaDetail();
     }
 
@@ -84,7 +84,7 @@ export class CineastaListComponent implements OnInit {
             this.showCreate = false;
             this.showEdit = true;
             this.cineasta_id = author_id;
-            this.selectedCineasta = new CineastaDetail();
+            
             this.getCineastaDetail();
         }
         else {
